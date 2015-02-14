@@ -13,7 +13,19 @@ Template.create.events({
         {
             console.log(userHobbies[i]);
         }
+        console.log(Meteor.user().emails[0].address);
 
+        var Status = UserDetails.insert({
+            Name: userName,
+            College: userCollege,
+            Hobbies: userHobbies,
+            Passion: userPassion,
+            FbLink: userFb,
+            TwitterLink: userTwitter,
+            Email: Meteor.user().emails[0].address,
+            createdAt: new Date()
+        });
+        Router.go('/view')
 
     }
     

@@ -27,6 +27,12 @@ Router.route('/create',function()
         });    
     
 
+Router.route('/view',function()
+        {
+            this.render('view');
+        });
+
+
 
 });
 
