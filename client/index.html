@@ -1,0 +1,11 @@
+<template name = "index">
+{{#if currentUser}}
+    Hello!<br/>
+    <a href="/" class="logout">Logout</a><br/>
+    <a href="/create" >To create!</a>
+    {{else}}
+        {{> register}}
+        <center><h2>You have an account?</h2></center>
+        {{> login}}
+    {{/if}}
+</template>
