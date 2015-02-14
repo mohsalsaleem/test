@@ -10,3 +10,6 @@ insecure
 twbs:bootstrap
 accounts-password
 iron:router
+cfs:standard-packages
+cfs:filesystem
+mrt:bootstrap-3

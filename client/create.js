@@ -1,4 +1,15 @@
 Template.create.events({
+
+    'change .fileInput':function(event,template){
+        FS.Utility.eachFile(event,function(file){
+                            var fileObj = new FS.File(file);
+        Uploads.insert(fileObj,function(err){
+                       console.log(err);
+                       })
+                            })
+
+    },
+
     'submit form': function(event,template) {
         event.preventDefault();
         var userName = template.find('#userName').value;
@@ -7,6 +18,9 @@ Template.create.events({
         var userPassion = template.find('#userPassion').value;
         var userFb = template.find('#userFb').value;
         var userTwitter = template.find('#userTwitter').vaue;
+
+       console.log(event.files);
+
         console.log(userName+'\n'+userCollege);
         console.log(userPassion);
         for(var i = 0; i< userHobbies.length; i++)

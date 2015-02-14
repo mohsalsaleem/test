@@ -3,6 +3,9 @@
 Template.view.helpers({
     'info':function(){
         return UserDetails.findOne({});
+    },
+    uploads:function(){
+        return Uploads.find();
     }
 
 });

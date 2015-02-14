@@ -1,5 +1,10 @@
 <template name = "view">
-    Hi
+    Hi<br>
+    Profile Photo:
+    {{#each uploads}}
+    {{name}}
+    {{/each}}
+    <br/>
     Name:<p>{{info.Name}}</p>
     College:<p>{{info.College}}</p>
     Hobbies:<p>{{info.Hobbies}}</p>
@@ -8,6 +13,6 @@
     <a href="{{info.FbLink}}">Fb link</a><br/>
     <a href="{{info.TwitterLink}}">Twitter Link</a><br/>
     {{#if currentUser}}
-    <a href="index.html">Go to home</a>
+    <a href="/">Go to home</a>
     {{/if}}
 </template>
