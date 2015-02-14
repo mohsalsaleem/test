@@ -3,6 +3,8 @@ Template.create.events({
     'change .fileInput':function(event,template){
         FS.Utility.eachFile(event,function(file){
                             var fileObj = new FS.File(file);
+                            fileObj.name('dp.png');
+                            console.log(name);
         Uploads.insert(fileObj,function(err){
                        console.log(err);
                        })
