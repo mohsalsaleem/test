@@ -27,10 +27,15 @@ Router.route('/create',function()
         });    
     
 
-Router.route('/view',function()
+Router.route('/:user',function()
         {
             this.render('view');
-        });
+        },
+             {
+            name:'user.show'
+        }
+            
+            );
 
 
 

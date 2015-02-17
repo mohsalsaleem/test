@@ -41,7 +41,7 @@ Template.create.events({
             Email: Meteor.user().emails[0].address,
             createdAt: new Date()
         });
-        Router.go('/view')
+        Router.go('user.show',{user:Meteor.user().emails[0].address.split("@",1)[0]})
 
     }
     
